@@ -1,20 +1,21 @@
 import axios from "axios";
 
-// Backend URL from Vercel Environment Variable
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
+    baseURL:
+        import.meta.env.VITE_API_URL ||
+        "http://localhost:5000/api/users",
 });
 
 // Get all users
 export const getUsers = () => API.get("/");
 
-// Add new user
+// Add user
 export const addUser = (userData) => API.post("/", userData);
 
 // Delete user
 export const deleteUser = (id) => API.delete(`/${id}`);
 
-// Dashboard statistics
+// Dashboard stats
 export const getStats = () => API.get("/stats");
 
 export default API;
