@@ -1,0 +1,348 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navbar */
+
+.navbar {
+    background: rgba(0, 0, 0, .6) !important;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    animation: slideDown .8s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+
+/* Dashboard Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    animation: fadeIn 1s;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    padding: 25px;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.total {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.unique {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.duplicate {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.false {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+.card h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ===========================
+   Search Box
+=========================== */
+
+.search-box {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    animation: fadeInUp .8s;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+    transition: .3s;
+}
+
+.search-box input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+/* ===========================
+   User Form
+=========================== */
+
+.user-form {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, .18);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    animation: fadeInUp .8s;
+}
+
+.user-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.user-form input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+}
+
+.btn-add {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-add:hover {
+    background: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(13, 110, 253, .4);
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.table-container {
+    width: 95%;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    animation: fadeInUp 1s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #0d6efd;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: center;
+}
+
+tbody tr {
+    transition: .3s;
+}
+
+tbody tr:hover {
+    background: #f4f7ff;
+    transform: scale(1.01);
+}
+
+/* ===========================
+   Status Badges
+=========================== */
+
+.badge {
+    display: inline-block;
+    min-width: 120px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    transition: .3s;
+}
+
+/* Unique */
+
+.badge.unique {
+    background: #22c55e;
+}
+
+/* Duplicate */
+
+.badge.duplicate {
+    background: #ef4444;
+}
+
+/* False Positive */
+
+.badge.false-positive {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: #fff;
+}
+
+.delete-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete-btn:hover {
+    background: #bb2d3b;
+    transform: scale(1.08);
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .user-form {
+        padding: 20px;
+    }
+
+}
