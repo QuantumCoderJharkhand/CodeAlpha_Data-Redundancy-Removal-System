@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Backend URL
+// Backend URL from Vercel Environment Variable
 const API = axios.create({
-    baseURL: "http://localhost:5000/api/users"
+    baseURL: import.meta.env.VITE_API_URL
 });
 
 // Get all users
